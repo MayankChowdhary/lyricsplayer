@@ -1,16 +1,16 @@
 
 
-part of 'song_bloc.dart';
+part of 'song_list_bloc.dart';
 
 @immutable
-abstract class SongState extends Equatable {}
+abstract class SongListState extends Equatable {}
 
-class SongLoadingState extends SongState {
+class SongLoadingState extends SongListState {
   @override
   List<Object?> get props => [];
 }
 
-class SongLoadedState extends SongState {
+class SongLoadedState extends SongListState {
   final SongModel song;
 
   SongLoadedState(this.song);
@@ -19,7 +19,7 @@ class SongLoadedState extends SongState {
   List<Object?> get props => [song];
 }
 
-class SongErrorState extends SongState {
+class SongErrorState extends SongListState {
   final String error;
 
   SongErrorState(this.error);

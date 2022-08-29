@@ -1,20 +1,23 @@
-import 'package:android_lyrics_player/controller/bloc/song_bloc.dart';
-import 'package:android_lyrics_player/ui/widgets/error_message_view.dart';
 import 'package:android_lyrics_player/ui/widgets/loading_widget.dart';
 import 'package:android_lyrics_player/ui/widgets/song_list_view.dart';
+import 'package:android_lyrics_player/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../controller/bloc/song_list_bloc/song_list_bloc.dart' as slb;
 import '../../../controller/cubit/internet_cubit.dart';
+import '../../widgets/message_view.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const routeName = Strings.homeScreenRoute;
+
   const HomeScreen({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<SongBloc>(context).add(LoadSongEvent());
+    BlocProvider.of<slb.SongBloc>(context).add(slb.LoadSongListEvent());
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -27,16 +30,16 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                BlocBuilder<SongBloc, SongState>(
+                BlocBuilder<slb.SongBloc, slb.SongListState>(
                   builder: (context, state) {
-                    if (state is SongLoadingState) {
+                    if (state is slb.SongLoadingState) {
                       return loadingWidget();
-                    } else if (state is SongLoadedState) {
-                      return songListView(context, state.song);
-                    } else if (state is SongErrorState) {
-                      return showErrorView();
+                    } else if (state is slb.SongLoadedState) {
+                      return SongListView(state.song);
+                    } else if (state is slb.SongErrorState) {
+                      return showMessageView(message: "API Limit Exhausted!");
                     } else {
-                      return showErrorView();
+                      return showMessageView();
                     }
                   },
                 ),
@@ -44,9 +47,9 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         } else if (state is InternetDisconnected) {
-          return showErrorView(message: "No Internet Available");
+          return showMessageView(message: "No Internet Available");
         } else {
-          return showErrorView();
+          return showMessageView();
         }
       }),
     );

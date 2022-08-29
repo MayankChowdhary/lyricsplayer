@@ -19,6 +19,7 @@ class SongRepository {
     debugPrint(uri.toString());
     final response = await http.get(uri);
     if (response.statusCode == 200) {
+      debugPrint(response.body);
       return songModelFromJson(response.body);
     } else {
       debugPrint("Failed to load Songs");

@@ -2,7 +2,6 @@ import 'package:android_lyrics_player/controller/bloc/song_details_bloc/song_det
     as sdb;
 import 'package:android_lyrics_player/controller/bloc/song_lyrics_bloc/song_lyrics_bloc.dart'
     as lyb;
-import 'package:android_lyrics_player/ui/screens/ScreenArguments.dart';
 import 'package:android_lyrics_player/ui/widgets/loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

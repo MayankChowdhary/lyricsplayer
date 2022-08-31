@@ -4,7 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
-import '../../utils/constants/con_types.dart';
+import '../../utils/constants/connection_types.dart';
 
 part 'internet_state.dart';
 

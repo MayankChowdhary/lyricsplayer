@@ -1,8 +1,8 @@
 import 'package:android_lyrics_player/data/models/song_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/constants/strings.dart';
-import '../screens/ScreenArguments.dart';
+import '../../../utils/constants/strings.dart';
+import '../../../utils/constants/ScreenArguments.dart';
 
 class SongListView extends StatelessWidget {
   const SongListView(this.model, {super.key});

@@ -1,5 +1,5 @@
 import 'package:android_lyrics_player/ui/widgets/loading_widget.dart';
-import 'package:android_lyrics_player/ui/widgets/song_list_view.dart';
+import 'package:android_lyrics_player/ui/screens/home_screen/song_list_view.dart';
 import 'package:android_lyrics_player/utils/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

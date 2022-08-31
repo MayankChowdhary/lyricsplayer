@@ -1,5 +1,5 @@
-import 'package:android_lyrics_player/ui/screens/ScreenArguments.dart';
-import 'package:android_lyrics_player/ui/screens/home_screen/song_details_screen.dart';
+import 'package:android_lyrics_player/utils/constants/ScreenArguments.dart';
+import 'package:android_lyrics_player/ui/screens/song_details_screen/song_details_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/screens/home_screen/home_screen.dart';

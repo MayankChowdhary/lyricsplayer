@@ -1,8 +1,9 @@
-import 'package:android_lyrics_player/data/models/song_detail_model.dart';
 import 'package:android_lyrics_player/data/models/song_model.dart';
 import 'package:android_lyrics_player/utils/constants/strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
+
+import '../models/song_details_model.dart';
 
 class SongDetailsRepository {
   final queryParameters = {'apikey': Strings.apiKeyMusixMatch};

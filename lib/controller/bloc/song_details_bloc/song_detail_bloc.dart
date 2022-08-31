@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:android_lyrics_player/data/models/song_detail_model.dart';
 import 'package:android_lyrics_player/data/repositories/song_details_repository.dart';
 import 'package:android_lyrics_player/data/repositories/song_repository.dart';
 import 'package:bloc/bloc.dart';
@@ -8,7 +7,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 
-import '../../../data/models/song_model.dart';
+import '../../../data/models/song_details_model.dart';
 
 
 part 'song_details_event.dart';

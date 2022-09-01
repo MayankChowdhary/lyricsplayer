@@ -64,7 +64,7 @@ class SongDetailScreen extends StatelessWidget {
                     BlocBuilder<lyb.SongLyricsBloc, lyb.SongLyricsState>(
                       builder: (context, state) {
                         if (state is lyb.SongLoadingState) {
-                          return loadingWidget();
+                          return Container();
                         } else if (state is lyb.SongLoadedState) {
                           return SongLyricsView(state.song);
                         } else if (state is lyb.SongErrorState) {

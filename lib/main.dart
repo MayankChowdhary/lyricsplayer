@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        home: HomeScreen(key: this.key,title: "Songs"),
+        home: HomeScreen(key: this.key,title: "Lyrics Player"),
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,

@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class AppTheme {
   const AppTheme._();
 
-  static final MaterialColor primaryLight = Colors.orange;
-  static final MaterialColor primaryDark = Colors.orange;
+  static final Color primaryLight = Colors.cyan.shade700;
+  static final Color primaryDark = Colors.teal.shade500;
   static final lightTheme = ThemeData(
-    primarySwatch: primaryLight,
+    primarySwatch: Colors.cyan,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 
   static final darkTheme = ThemeData(
-    primarySwatch: primaryDark,
+    primarySwatch:  Colors.cyan,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }

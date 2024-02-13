@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
     BlocProvider.of<slb.SongBloc>(context).add(slb.LoadSongListEvent());
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title, style: TextStyle(color: Colors.white),),
         centerTitle: true,
         backgroundColor: AppTheme.primaryLight,
       ),

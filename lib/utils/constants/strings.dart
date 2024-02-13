@@ -16,6 +16,9 @@ class Strings {
   static const String songDetailUrl = "${baseUrl}track.get";
   static const String songLyricsUrl = "${baseUrl}track.lyrics.get";
 
+  static const String iconGifUrl = "https://i.pinimg.com/originals/17/72/f1/1772f18a9f99aeb4a56d047960f272a1.gif";
+  static const String iconPlayUrl = "https://i.pinimg.com/originals/00/74/e3/0074e333fc2b2e9d6120a0c826306f5a.gif";
+
 
 
 

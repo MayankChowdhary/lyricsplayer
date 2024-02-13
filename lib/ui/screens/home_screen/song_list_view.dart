@@ -1,4 +1,5 @@
 import 'package:android_lyrics_player/data/models/song_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/strings.dart';
@@ -34,10 +35,13 @@ class SongListView extends StatelessWidget {
                   margin: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Image.asset(
-                        'assets/album_art.png',
+                      CachedNetworkImage(
                         height: 50,
                         width: 50,
+                        imageUrl:  Strings.iconGifUrl,
+                        placeholder: (context, url) => new CircularProgressIndicator(),
+                        errorWidget: (context, url, error) => Image.asset(
+                          'assets/album_art.png', height: 50, width: 50,),
                       ),
                       Expanded(
                         child: Padding(

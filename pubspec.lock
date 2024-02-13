@@ -9,6 +9,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.1"
+  assets_audio_player:
+    dependency: "direct main"
+    description:
+      name: assets_audio_player
+      sha256: "9a87062cf39be0730ba8bb31ed4d148ca4e892e0ae607113f346d3c9a8da5df0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
+  assets_audio_player_web:
+    dependency: transitive
+    description:
+      name: assets_audio_player_web
+      sha256: "24cf82e72c7e7f9292d67e1b52d7945a182d9695ce8f903f60e5c6b379cbcaac"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
   async:
     dependency: transitive
     description:
@@ -161,14 +177,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
-  fixnum:
-    dependency: transitive
-    description:
-      name: fixnum
-      sha256: "25517a4deb0c03aa0f32fd12db525856438902d9c16536311e76cdc57b31d7d1"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -405,14 +413,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
-  sprintf:
-    dependency: transitive
-    description:
-      name: sprintf
-      sha256: "1fc9ffe69d4df602376b52949af107d8f5703b77cda567c4d7d86a0693120f23"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.0.0"
   sqflite:
     dependency: transitive
     description:
@@ -489,10 +489,10 @@ packages:
     dependency: transitive
     description:
       name: uuid
-      sha256: cd210a09f7c18cbe5a02511718e0334de6559871052c90a90c0cca46a4aa81c8
+      sha256: "648e103079f7c64a36dc7d39369cabb358d377078a051d6ae2ad3aa539519313"
       url: "https://pub.dev"
     source: hosted
-    version: "4.3.3"
+    version: "3.0.7"
   vector_math:
     dependency: transitive
     description:

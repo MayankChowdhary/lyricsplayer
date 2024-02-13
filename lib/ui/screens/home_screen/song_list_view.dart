@@ -1,3 +1,4 @@
+import 'package:android_lyrics_player/core/themes/app_theme.dart';
 import 'package:android_lyrics_player/data/models/song_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -53,8 +54,9 @@ class SongListView extends StatelessWidget {
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     "Track: ${model?.message?.body?.trackList![index].track?.trackName}",
-                                    overflow: TextOverflow.ellipsis,
+                                    overflow: TextOverflow.ellipsis, style: TextStyle(color: AppTheme.primaryLight, fontSize: 16),
                                   )),
+                              SizedBox(height: 4),
                               Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(

@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../controller/cubit/internet_cubit.dart';
+import '../../../core/themes/app_theme.dart';
 import '../../../utils/constants/strings.dart';
 import '../../widgets/message_view.dart';
 
@@ -36,6 +37,7 @@ class SongDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
+        backgroundColor: AppTheme.primaryLight,
       ),
       body:
           BlocBuilder<InternetCubit, InternetState>(builder: (context, state) {

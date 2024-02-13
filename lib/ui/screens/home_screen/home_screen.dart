@@ -1,3 +1,4 @@
+import 'package:android_lyrics_player/core/themes/app_theme.dart';
 import 'package:android_lyrics_player/ui/widgets/loading_widget.dart';
 import 'package:android_lyrics_player/ui/screens/home_screen/song_list_view.dart';
 import 'package:android_lyrics_player/utils/constants/strings.dart';
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
+        backgroundColor: AppTheme.primaryLight,
       ),
       body:
           BlocBuilder<InternetCubit, InternetState>(builder: (context, state) {

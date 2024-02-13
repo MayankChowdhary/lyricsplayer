@@ -29,7 +29,8 @@ class UserInfoPage extends StatelessWidget with Validator {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            BlocSelector<FormValidatorCubit, FormValidatorState, AutovalidateMode>(
+            BlocSelector<FormValidatorCubit, FormValidatorState,
+                AutovalidateMode>(
               bloc: _formValidatorCubit,
               selector: (state) => state.autovalidateMode,
               builder: (context, AutovalidateMode autovalidateMode) {
@@ -133,7 +134,8 @@ class UserInfoPage extends StatelessWidget with Validator {
                     // in case a user has submitted invalid form we'll set
                     // AutovalidateMode.always which will rebuild the form
                     // in result we'll start getting error message
-                    _formValidatorCubit.updateAutovalidateMode(AutovalidateMode.always);
+                    _formValidatorCubit
+                        .updateAutovalidateMode(AutovalidateMode.always);
                   }
                 },
                 child: const Text('SAVE'),

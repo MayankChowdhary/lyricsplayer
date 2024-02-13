@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../controller/bloc/song_list_bloc/song_list_bloc.dart' as slb;
 import '../../../controller/cubit/internet_cubit.dart';
+import '../../widgets/dipslay_snackbar.dart';
 import '../../widgets/message_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,9 +22,19 @@ class HomeScreen extends StatelessWidget {
     BlocProvider.of<slb.SongBloc>(context).add(slb.LoadSongListEvent());
     return Scaffold(
       appBar: AppBar(
-        title: Text(title, style: TextStyle(color: Colors.white),),
+        title: Text(
+          title,
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         backgroundColor: AppTheme.primaryLight,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          displaySnackbar(context,"Listener Info");
+        },
+        child: const Image(image: AssetImage("assets/user.png"))
       ),
       body:
           BlocBuilder<InternetCubit, InternetState>(builder: (context, state) {

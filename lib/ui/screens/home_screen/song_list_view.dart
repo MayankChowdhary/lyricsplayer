@@ -73,7 +73,7 @@ class SongListView extends StatelessWidget {
                         width: 100.0,
                         child: Text(
                             "Artist: ${model?.message?.body?.trackList![index].track?.artistName}",
-                            overflow: TextOverflow.ellipsis,
+                            overflow: TextOverflow.ellipsis,style: TextStyle(color: Colors.purple),
                             maxLines: 2),
                       ),
                     ],

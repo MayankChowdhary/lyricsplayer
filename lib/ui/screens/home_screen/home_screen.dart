@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          displaySnackbar(context,"Listener Info");
+          Navigator.pushNamed(context, Strings.userInfoRoute);
         },
         child: const Image(image: AssetImage("assets/user.png"))
       ),

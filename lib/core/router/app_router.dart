@@ -1,3 +1,4 @@
+import 'package:android_lyrics_player/ui/screens/user_info_screen/user_info_screen.dart';
 import 'package:android_lyrics_player/utils/constants/ScreenArguments.dart';
 import 'package:android_lyrics_player/ui/screens/song_details_screen/song_details_screen.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,9 @@ class AppRouter {
   const AppRouter._();
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    final args = settings.arguments as ScreenArguments;
+    dynamic args = null;
+    if (settings.arguments != null)
+      args = settings.arguments as ScreenArguments;
 
     switch (settings.name) {
       case Strings.homeScreenRoute:
@@ -27,6 +30,10 @@ class AppRouter {
             title: Strings.detailsScreenTitle,
             trackId: args.arg1!,
           ),
+        );
+      case Strings.userInfoRoute:
+        return MaterialPageRoute(
+          builder: (_) => UserInfoPage(),
         );
 
       default:

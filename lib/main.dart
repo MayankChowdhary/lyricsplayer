@@ -8,6 +8,7 @@ import 'package:android_lyrics_player/data/repositories/song_details_repository.
 import 'package:android_lyrics_player/data/repositories/song_lyrics_repository.dart';
 import 'package:android_lyrics_player/data/repositories/song_repository.dart';
 import 'package:android_lyrics_player/ui/screens/home_screen/home_screen.dart';
+import 'package:android_lyrics_player/utils/constants/strings.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -64,7 +65,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        home: HomeScreen(key: this.key,title: "Lyrics Player"),
+        home: HomeScreen(key: this.key,title: Strings.homeScreenTitle),
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,

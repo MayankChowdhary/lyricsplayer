@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../controller/cubit/form_validator_cubit/form_validator_cubit.dart';
 import '../../../core/themes/app_theme.dart';
 import '../../../utils/validator.dart';
+import '../../widgets/dipslay_snackbar.dart';
 
 // you can see we've added our Validator mixin
 // and now we can access all it's method directly
@@ -130,6 +131,7 @@ class UserInfoPage extends StatelessWidget with Validator {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     // Do your job here
+                    displaySnackbar(context,"Listener's info successfully sent");
                   } else {
                     // in case a user has submitted invalid form we'll set
                     // AutovalidateMode.always which will rebuild the form
@@ -138,7 +140,7 @@ class UserInfoPage extends StatelessWidget with Validator {
                         .updateAutovalidateMode(AutovalidateMode.always);
                   }
                 },
-                child: const Text('SAVE'),
+                child: const Text('SEND INFO'),
               ),
             ),
             const SizedBox(height: 8.0)

@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 mixin Validator {
   // Email validation
   String? validateEmail(String? value) {
@@ -19,17 +21,19 @@ mixin Validator {
     return null;
   }
 
-  // City validation
-  String? validateCity(String? value) {
+  String? validatePhone(String? value) {
     if (value == null || value.isEmpty) {
-      return 'City is required';
+      return 'Name is required';
+    } else if (value.length < 10) {
+      return 'Please enter a valid phone';
     }
     return null;
   }
 
-  String? validatePhone(String? value) {
+  // City validation
+  String? validateCity(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Phone is required';
+      return 'City is required';
     }
     return null;
   }

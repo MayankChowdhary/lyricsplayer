@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'controller/bloc/song_list_bloc/song_list_bloc.dart' as slb;
-import 'controller/cubit/internet_cubit.dart';
+import 'controller/cubit/internet_cubit/internet_cubit.dart';
 import 'controller/debug/app_bloc_observer.dart';
 import 'core/router/app_router.dart';
 import 'core/themes/app_theme.dart';

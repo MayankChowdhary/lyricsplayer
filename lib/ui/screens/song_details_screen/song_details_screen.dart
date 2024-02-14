@@ -10,7 +10,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../controller/cubit/internet_cubit.dart';
+import '../../../controller/cubit/internet_cubit/internet_cubit.dart';
 import '../../../core/themes/app_theme.dart';
 import '../../../utils/constants/strings.dart';
 import '../../widgets/message_view.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../controller/cubit/form_validator_cubit.dart';
+import '../../../controller/cubit/form_validator_cubit/form_validator_cubit.dart';
 import '../../../core/themes/app_theme.dart';
 import '../../../utils/validator.dart';
 

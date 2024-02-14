@@ -4,9 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
 class SongLyricsRepository {
-  final queryParameters = {'apikey': Strings.apiKeyMusixMatch};
+
 
   Future<SongLyricsModel> getSongLyrics(String trackId) async {
+     final   queryParameters = {'apikey': Strings.apiKeyMusixMatch};
     queryParameters.putIfAbsent('track_id', () => trackId);
     Uri uri = Uri.parse(Strings.songLyricsUrl)
         .replace(queryParameters: queryParameters);

@@ -6,13 +6,16 @@ import 'package:http/http.dart' as http;
 import '../models/song_details_model.dart';
 
 class SongDetailsRepository {
-  final queryParameters = {'apikey': Strings.apiKeyMusixMatch};
+
 
   Future<SongDetailModel> getSongDetails(String trackId) async {
+     final queryParameters = {'apikey': Strings.apiKeyMusixMatch};
+    debugPrint("DetailsAPI: "+trackId);
     queryParameters.putIfAbsent('track_id', () => trackId);
     Uri uri = Uri.parse(Strings.songDetailUrl)
         .replace(queryParameters: queryParameters);
-    debugPrint(uri.toString());
+    debugPrint(uri.toString() +"id: "+queryParameters['track_id']!);
+    debugPrint("track_id: "+queryParameters['track_id']!);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
       debugPrint(response.body);
